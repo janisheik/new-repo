@@ -19,7 +19,7 @@ pipeline {
          
           }
        }       
-    }
+    
        stage('kubectl deploy'){ 
        steps
         {
@@ -33,4 +33,4 @@ pipeline {
         }
       } 
     }
-
+  }
