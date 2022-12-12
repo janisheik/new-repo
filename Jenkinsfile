@@ -10,7 +10,7 @@ pipeline {
       }
         stage('build docker image') {
           steps {
-              echo "build docker image"
+              echo ("build docker image")
               sh 'aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/c9e3o3h3'
               sh 'sudo docker build -t httpd .'
               sh 'sudo docker tag httpd:latest public.ecr.aws/c9e3o3h3/httpd:latest'
